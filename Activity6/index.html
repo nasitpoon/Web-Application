@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <title>Top highest goalscorers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<style>
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-image: url('https://cdnuploads.aa.com.tr/uploads/Contents/2023/04/21/thumbs_b_c_cba01d844f0290b4ffdbb67e95c435f7.jpg?v=211438');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+    }
+
+    .top-seven {
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .container {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .btn-primary {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .container:hover .card-title {
+        opacity: 1;
+        text-align: center;
+    }
+
+    .card-title {
+        top: 7.5%;
+        left: 50%;
+        opacity: 0;
+        color: white;
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+        padding: 16px 32px;
+        transition: .5s ease;
+        transform: translate(-50%, -50%);
+        /* font-family: "Copperplate", fantasy; */
+        background-color: #00088E;
+        -ms-transform: translate(-50%, -50%);
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img src="https://freepngimg.com/thumb/adidas/93880-league-ball-adidas-uefa-football-champions-2018.png"
+                alt="Football" width="100">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rank1">Rank1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rank2">Rank2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rank3">Rank3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rank4">Rank4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rank5">Rank5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rank6">Rank6</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rank7">Rank7</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex ms-auto">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <br>
+    <div class="top-seven">
+        <h1>List of UEFA Champions League top scorers</h1>
+    </div>
+    <br><br>
+    <div class="container" style="width: 25rem; height: 30rem;">
+        <br>
+        <div class="row">
+            <!-- rank1 -->
+            <div class="rank1_card" style="align-items: flex-start;">
+                <div class="card bg-opacity-75 bg-light" id="Rank1" style="width: 25rem; height: 33rem;">
+                    <div class="card-title">#1 Cristiano Ronaldo</div>
+                    <div class="card-body"><img
+                            src="https://s.france24.com/media/display/2e9ae70c-131a-11ec-93a3-005056a97e36/w:1280/p:1x1/efc6391b39735bf0ec3857860183c094381d25ea.jpg"
+                            width="100%"></div>
+                    <p style="justify-content: center; align-items: center;">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+                            aria-expanded="false" aria-controls="collapseExample"
+                            style="position: relative; left: 18px;">
+                            Read More
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample1">
+                        <div class="card card-body" style="position: relative; left: 110%; bottom: 290px;">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id odit eos temporibus magni illum commodi culpa! Veritatis perspiciatis at odit!
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- rank2 -->
+                <div class="rank2_card" style="align-items: flex-start;">
+                    <div class="card bg-opacity-75 bg-light" id="Rank2" style="width: 25rem; height: 33rem;">
+                        <div class="card-title">#2 Lionel Messi</div>
+                        <div class="card-body"><img
+                                src="https://im.rediff.com/sports/2017/feb/04messi.jpg?w=670&h=900"
+                                width="366.4px" height="366.4px" style="align-items: center;"></div>
+                        <p style="justify-content: center; align-items: center;">
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                                aria-expanded="false" aria-controls="collapseExample"
+                                style="position: relative; left: 18px;">
+                                Read More
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample2">
+                            <div class="card card-body" style="position: relative; left: 110%; bottom: 290px;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, numquam velit? Odio eligendi quo mollitia porro qui adipisci ex accusamus.
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- rank3 -->
+                    <div class="rank3_card" style="align-items: flex-start;">
+                        <div class="card bg-opacity-75 bg-light" id="Rank3" style="width: 25rem; height: 33rem;">
+                            <div class="card-title">#3 Robert Lewandowski</div>
+                            <div class="card-body"><img
+                                    src="https://www.elnacional.cat/uploads/s1/15/51/57/68/robert-lewandowski-bayern-munic-vertical-europa-press_1_630x630.jpeg"
+                                    width="366.4px" height="366.4px" style="align-items: center;"></div>
+                            <p style="justify-content: center; align-items: center;">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample"
+                                    style="position: relative; left: 18px;">
+                                    Read More
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseExample3">
+                                <div class="card card-body" style="position: relative; left: 110%; bottom: 290px;">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ipsam dicta voluptatum natus distinctio! Modi nobis asperiores dolore accusamus nulla?
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="rank4_card" style="align-items: flex-start;">
+                            <div class="card bg-opacity-75 bg-light" id="Rank4" style="width: 25rem; height: 33rem;">
+                                <div class="card-title">#4 Karim Benzema</div>
+                                <div class="card-body"><img
+                                        src="https://scontent.fbkk13-1.fna.fbcdn.net/v/t39.30808-6/344415342_181439494834752_7441263900005951640_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3635dc&_nc_ohc=aE7y-NANfL0AX9_oaJ7&_nc_ht=scontent.fbkk13-1.fna&oh=00_AfAyLOPCEMLydKsoWdEUXszKdQTsLQ7a-hEg4c-8b7jP8w&oe=65C1FA4E"
+                                        width="366.4px" height="366.4px" style="align-items: center;"></div>
+                                <p style="justify-content: center; align-items: center;">
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample4"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample"
+                                        style="position: relative; left: 18px;">
+                                        Read More
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample4">
+                                    <div class="card card-body" style="position: relative; left: 110%; bottom: 290px;">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt quo totam assumenda modi quisquam nemo unde vitae rerum adipisci voluptatem.
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="rank5_card" style="align-items: flex-start;">
+                                <div class="card bg-opacity-75 bg-light" id="Rank5"
+                                    style="width: 25rem; height: 33rem;">
+                                    <div class="card-title">#5 Raúl</div>
+                                    <div class="card-body"><img
+                                            src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.6435-9/73495287_980784508949750_5449543325088481280_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=a1MjMx18UzkAX_WVjOQ&_nc_ht=scontent.fbkk13-2.fna&oh=00_AfB6I-WVzikeEWfDVAkrX1ixcos5kGLWY98_tjEXYRWzqw&oe=65E55C92"
+                                            width="366.4px" height="366.4px" style="align-items: center;"></div>
+                                    <p style="justify-content: center; align-items: center;">
+                                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample5"
+                                            role="button" aria-expanded="false" aria-controls="collapseExample"
+                                            style="position: relative; left: 18px;">
+                                            Read More
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="collapseExample5">
+                                        <div class="card card-body"
+                                            style="position: relative; left: 110%; bottom: 290px;">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt voluptates nisi temporibus debitis ea blanditiis doloribus provident ullam sapiente maiores!
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="rank6_card" style="align-items: flex-start;">
+                                <div class="card bg-opacity-75 bg-light" id="Rank6" style="width: 25rem; height: 33rem;">
+                                    <div class="card-title">#6 Ruud van Nistelrooy</div>
+                                    <div class="card-body"><img
+                                            src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t39.30808-6/210379421_10158718097152746_3759604922856067140_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=b50f6c&_nc_ohc=F8UqFSATnKcAX_2Erb7&_nc_ht=scontent.fbkk13-2.fna&oh=00_AfDH7EanM9KrbVsMzkxa23SdSkPJwpJWsRL1aolIe7kndA&oe=65C1F234"
+                                            width="366.4px" height="366.4px" style="align-items: center;"></div>
+                                    <p style="justify-content: center; align-items: center;">
+                                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample6"
+                                            role="button" aria-expanded="false" aria-controls="collapseExample"
+                                            style="position: relative; left: 18px;">
+                                            Read More
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="collapseExample6">
+                                        <div class="card card-body" style="position: relative; left: 110%; bottom: 290px;">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus obcaecati tempore ducimus et pariatur modi consequatur labore quasi, possimus deleniti.
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+    
+                                <div class="rank7_card" style="align-items: flex-start;">
+                                    <div class="card bg-opacity-75 bg-light" id="Rank7"
+                                        style="width: 25rem; height: 33rem;">
+                                        <div class="card-title">#7 Thomas Müller</div>
+                                        <div class="card-body"><img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Thomas_M%C3%BCller_2022_%28cropped%29.jpg/330px-Thomas_M%C3%BCller_2022_%28cropped%29.jpg"
+                                                width="366.4px" height="366.4px" style="align-items: center;"></div>
+                                        <p style="justify-content: center; align-items: center;">
+                                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample7"
+                                                role="button" aria-expanded="false" aria-controls="collapseExample"
+                                                style="position: relative; left: 18px;">
+                                                Read More
+                                            </a>
+                                        </p>
+                                        <div class="collapse" id="collapseExample7">
+                                            <div class="card card-body"
+                                                style="position: relative; left: 110%; bottom: 290px;">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reprehenderit laboriosam itaque sequi rem iusto aut dolore molestiae, in esse!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+
+                        </div>
+</body>
+
+</html>

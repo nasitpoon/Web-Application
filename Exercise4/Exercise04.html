@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+    <head></head>
+
+    <body>
+        <div id="maincontainer"></div>
+        <script>
+            var maincontainer = document.getElementById("maincontainer");
+            var heading = document.createElement("h2");
+            heading.textContent = "Exercise 04: Javascript&DOM";
+            heading.style.fontSize = "25px";
+            maincontainer.appendChild(heading);
+
+            
+            //button
+            let colors = ["black", "green", "red", "yellow", "purple", "blue", "black"]
+            let text_color = ["navyblue", "purple", "magenta", "orange", "red", "darkyblue", "white"]
+            let div_date = document.createElement("div");
+            div_date.style.marginBottom = "2rem";
+            div_date.style.height = "10px";
+
+            let button = document.createElement("button");
+            button.textContent = "Click me to display date and time";
+            let worker = null;
+            let stopclock = false;
+
+            button.addEventListener("click", function () {
+                if (stopclock) {
+                    worker.terminate();
+                    worker = null;
+                    stopclock = false;
+                    button.style.position = "static";
+                    button.style.top = "auto";
+                    button.style.left = "auto";
+                } 
+                else {
+                    if (worker == null) {
+                        worker = new Worker("worker.js");
+                        let i = 0; // Initialize an index variable for the colors array
+                        worker.onmessage = function (e) {
+                            button.style.position = "fixed";
+                            button.style.top = "0";
+                            button.style.right = "0";
+                            button.style.zIndex = "9999";
+                            button.textContent = e.data;
+                            button.style.backgroundColor = colors[i]; // Set the background color of the button
+                            i = (i + 1) % colors.length; // Update the index to cycle through the colors
+                            button.style.color = text_color[i];
+                            i = (i + 1) % text_color.length;
+                        };
+                        worker.postMessage("start");
+                        stopclock = true;
+                        
+                    }
+                }
+            });
+
+
+            div_date.appendChild(button);
+            maincontainer.appendChild(div_date);
+
+            
+
+            // var buttondisplaydate = document.createElement("button");
+            // buttondisplaydate.textContent = "Click me to display Date and Time";
+            // maincontainer.appendChild(buttondisplaydate);
+
+            
+            // var displayDateBtn = document.getElementById("displayDateBtn");
+
+
+            var personal = document.createElement('a');
+            personal.style.color = "#EA7EE6";
+            personal.textContent = "Personal Info";
+            personal.style.cursor = "pointer";
+            personal.style.textDecoration = "underline";
+            personal.onmouseover = function () {
+            personal.style.background = "yellow"
+            personal.style.color = "blue";
+            };
+            personal.onmouseleave = function () {
+                personal.style.background = "white";
+                personal.style.color = "#EA7EE6";
+            };
+            maincontainer.appendChild(personal);
+
+            var maincontainer = document.getElementById("maincontainer");
+
+
+            personal.addEventListener("click", toggleVisibility);
+
+            maincontainer.appendChild(personal);
+
+            var personalInfo = document.createElement('ul');
+
+            var myname = document.createElement('li');
+            myname.textContent = 'Nasit Phalunchai, ID 65010273';
+
+            var subject = document.createElement('li');
+            subject.textContent = 'Subject: WEB APPLICATION DEVELOPMENT';
+
+            var semester = document.createElement('li');
+            semester.textContent = 'Semester: 2';
+            
+            personalInfo.append(myname);
+            personalInfo.append(subject);
+            personalInfo.append(semester);
+            personalInfo.style.display = "none";
+            maincontainer.appendChild(personalInfo);
+
+            function toggleVisibility() {
+                if (personalInfo.style.display === "none") {
+                    personalInfo.style.display = "block";
+                } else {
+                    personalInfo.style.display = "none";
+                }
+            }
+
+            var snapshotsheader = document.createElement('h1');
+            snapshotsheader.textContent = 'Snapshots';
+            heading.style.font = '50px';
+            maincontainer.appendChild(snapshotsheader);
+
+
+            var snapshotslist = document.createElement('ul');
+
+            // Fireworks
+            var fireworks = document.createElement('li');
+            var fireworksText = document.createElement('span');
+            var fireworksImage = document.createElement('img');
+
+        
+            fireworksText.textContent = 'Fireworks';
+            fireworksText.style.color = 'blue';
+            fireworksText.style.cursor = 'pointer';
+            fireworksText.style.textDecoration = 'underline';
+
+            
+            fireworks.appendChild(fireworksText);
+            
+
+            // Crest
+            var crest = document.createElement('li');
+            var crestText = document.createElement('span');
+            var crestImage = document.createElement('img');
+
+        
+            crestText.textContent = 'Crest';
+            crestText.style.color = 'blue';
+            crestText.style.cursor = 'pointer';
+            crestText.style.textDecoration = 'underline';
+
+
+            crest.appendChild(crestText);
+
+            
+            // Action
+            var action = document.createElement('li');
+            var actionText = document.createElement('span');
+            var actionImage = document.createElement('img');
+
+        
+            actionText.textContent = 'Action';
+            actionText.style.color = 'blue';
+            actionText.style.cursor = 'pointer';
+            actionText.style.textDecoration = 'underline';
+
+            action.appendChild(actionText);
+
+            // Buffalo
+            var buffalo = document.createElement('li');
+            var buffaloText = document.createElement('span');
+            var buffaloImage = document.createElement('img');
+
+        
+            buffaloText.textContent = 'Buffalo';
+            buffaloText.style.color = 'blue';
+            buffaloText.style.cursor = 'pointer';
+            buffaloText.style.textDecoration = 'underline';
+
+            buffalo.appendChild(buffaloText);
+
+
+            snapshotslist.append(fireworks);
+            snapshotslist.append(crest);
+            snapshotslist.append(action);
+            snapshotslist.append(buffalo);
+            maincontainer.appendChild(snapshotslist);
+
+
+            var displayImg = document.createElement('img');
+            displayImg.style.width = '500px';
+
+            fireworksText.addEventListener("click", function() {
+            displayImg.src = "https://cdn.britannica.com/82/203482-050-E2ABDA79/People-fireworks.jpg?w=600&q=60"
+            toggleImageVisibility(displayImg);
+            });
+
+            crestText.addEventListener("click", function() {
+            displayImg.src = "https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-9-logo-png-transparent.png"
+            toggleImageVisibility(displayImg);
+            });
+
+            actionText.addEventListener("click", function() {
+            displayImg.src = "https://scontent.fbkk12-3.fna.fbcdn.net/v/t39.30808-6/302493430_377866344558962_5895973227712805603_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=nFtNkpIPVOoAX_FtGU4&_nc_ht=scontent.fbkk12-3.fna&oh=00_AfDUwZTt7WtJsyAN23xtLhpZk7WbnjAEQ4ugPUZFFEsxag&oe=65C91407"
+            toggleImageVisibility(displayImg);
+            });
+
+            buffaloText.addEventListener("click", function() {
+            displayImg.src = " https://www.trvst.world/wp-content/uploads/2023/07/buffalo-on-wheat-field.jpg"
+            toggleImageVisibility(displayImg);
+            });
+
+            displayImg.src = 'https://scontent.fbkk7-3.fna.fbcdn.net/v/t39.30808-6/297283850_5367962686597930_4237137743468903702_n.png?_nc_cat=100&ccb=1-7&_nc_sid=783fdb&_nc_ohc=EzqsLXBoP2kAX_AdA-h&_nc_oc=AQklCaMoJ9a5slLPqpuOotTsWmMlVZWmdydXP8FgneZsSg5KZRoW5eiUaumiTnSFjVA&_nc_ht=scontent.fbkk7-3.fna&oh=00_AfCmA0Gas7izSHx2YvpS9g9MoSnrm4fss9-lA_zKnCTkeA&oe=65C7315E';
+            displayImg.style.width = '500px';    
+            maincontainer.appendChild(displayImg);
+
+
+        </script>
+    </body>
+</html>
